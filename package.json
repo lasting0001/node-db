@@ -1,0 +1,38 @@
+{
+  "name": "node-db",
+  "version": "1.0.0",
+  "description": "Single sql、one sql batch params and batch sql batch params execute for nodejs.",
+  "keywords": [
+    "db",
+    "mysql",
+    "pool",
+    "node"
+  ],
+  "license": "Apache-2.0",
+  "main": "./index",
+  "author": "jun.li <514332157@qq.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lasting0001/node-db.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lasting0001/node-db/issues"
+  },
+  "engines": {
+    "node": ">=0.8"
+  },
+  "scripts": {
+    "test": "vows"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "mysql": "^2.9.0"
+  },
+  "devDependencies": {},
+  "browser": {
+    "os": false
+  },
+  "homepage": "https://github.com/lasting0001/node-db#readme"
+}
