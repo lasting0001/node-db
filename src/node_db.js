@@ -91,6 +91,11 @@ function NodeDBShell(config) {
                         callBack(true);
                     });
                 });
+            },
+            end: function () {
+                for (var key in pool) {
+                    pool[key].end();
+                }
             }
         }
     };
