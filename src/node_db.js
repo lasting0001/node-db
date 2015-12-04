@@ -96,6 +96,10 @@ function NodeDBShell(config) {
                 for (var key in pool) {
                     pool[key].end();
                 }
+            },
+            restart: function (config) {
+                this.end();
+                pool = db_pool.initPool(config || config_local);
             }
         }
     };

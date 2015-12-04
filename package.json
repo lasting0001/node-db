@@ -1,6 +1,6 @@
 {
   "name": "node-db",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Single sql、one sql batch params and batch sql batch params execute for nodejs.",
   "keywords": [
     "db",
