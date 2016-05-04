@@ -5,15 +5,15 @@
 var mysql = require('mysql');
 
 function DBPool() {
-    //var env = process.env.NODE_ENV || "development";
     return {
         initPool: function (config) {
-            var db_pool = {}, idx = 0;
+            var db_pool = {}, idx = 0, temp = {}, temp_pool;
             for (var key in config) {
                 (++idx === 1) && (config.default_db = key);
-                var temp = config[key];
-                //var temp = config[key][env];
-                temp && (db_pool[key] = mysql.createPool(temp));
+                temp = config[key];
+                temp_pool = mysql.createPool(temp);
+                temp && (db_pool[key] = temp_pool);
+                temp && (db_pool[idx - 1] = temp_pool);
             }
             return db_pool;
         },
